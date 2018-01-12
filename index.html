@@ -10,10 +10,16 @@
 
     <title>Sidetrack Studio Amsterdam</title>
 
+    <!-- Bootstrap Theme -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-XI0PIujkSZEzZ5m8WTEm+krRuIpfO+vHrEznaIrhTAkbrbIvfs11kzCqUarPR7yn" crossorigin="anonymous">
 
+    <!-- Font Awesome 5 -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+
+    <!-- Google Webfonts -->
     <link href="https://fonts.googleapis.com/css?family=Megrim|Source+Code+Pro:200" rel="stylesheet">
 
+    <!-- Custom styling -->
     <style>
       html, body, section, .section-bg, #menu, #menu-container, #menu-row {
         height: 100%;
@@ -28,11 +34,24 @@
         font-family: 'Megrim', cursive;
       }
 
+      .display-1 {
+        color: #fff;
+      }
+
       .section-bg {
         position: absolute;
         background-position: center;
         background-size: cover;
         z-index: 1;
+        height: inherit;
+        width: inherit;
+      }
+
+      .section-container {
+        height: inherit;
+      }
+      .section-container>.row {
+        height: inherit;
       }
 
       .section-container>* {
@@ -46,7 +65,7 @@
 
       #menu {
         position: fixed;
-        z-index: 999;
+        z-index: 800;
       }
 
       #menu a {
@@ -63,6 +82,26 @@
         font-size: 3rem;
       }
 
+      #menu-icons {
+        margin-top: 1.5rem;
+      }
+
+      #menu-icons>a {
+        margin-right: 1rem;
+      }
+
+      #info-col {
+        background-color: #ffffffbf;
+        color: #000;
+      }
+
+      #info-col>h1 {
+        color: #000;
+      }
+
+      #landing-col {
+        z-index: 900;
+      }
     </style>
   </head>
   <body>
@@ -77,8 +116,22 @@
             <div id="menu-links">
               <a href="#calendar">Calendar</a>
               <a href="#residents">Residents</a>
-              <a href="https://www.youtube.com/channel/UCe2sRe-bswHxC494oQkAlVQ/live" target="_blank">Live</a>
+
               <a href="#info">Info</a>
+            </div>
+            <div id="menu-icons">
+              <a href="https://www.youtube.com/channel/UCe2sRe-bswHxC494oQkAlVQ/live" target="_blank">
+                <i class="fab fa-3x fa-youtube"></i>
+              </a>
+              <a href="https://fb.com/sidetrack.amsterdam" target="_blank">
+                <i class="fab fa-3x fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/sidetrack.amsterdam/" target="_blank">
+                <i class="fab fa-3x fa-instagram"></i>
+              </a>
+              <a href="https://twitter.com/SidetrackAMS" target="_blank">
+                <i class="fab fa-3x fa-twitter"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -88,6 +141,13 @@
     <section id="landing" class="page">
       <div class="section-bg" style="background-image: url('img/bgs/01.jpg');">
       </div>
+      <div class="container-fluid section-container">
+        <div class="row align-items-center">
+          <div id="landing-col" class="col-lg-6 offset-lg-6">
+            <iframe width="640" height="480" src="https://www.youtube.com/embed/live_stream?channel=UCe2sRe-bswHxC494oQkAlVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="calendar" class="page">
@@ -96,6 +156,7 @@
       <div class="container-fluid section-container">
         <div class="col-lg-6 offset-lg-6">
           <h1 class="display-1">Calendar</h1>
+          <iframe src="https://calendar.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=paylogic.eu_u2eh90s5p8f481s9262rpu0ahk%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=Europe%2FAmsterdam" style="border-width:0" width="100%" height="75%" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
     </section>
@@ -106,7 +167,7 @@
       <div class="container-fluid section-container">
         <div class="col-lg-6 offset-lg-6">
           <h1 class="display-1">Residents</h1>
-          <div class="row card-deck">
+          <div class="row">
             <div class="col">
               <div class="card">
                 <img class="card-img-top" src="img/residents/brent.jpg" alt="Card image cap">
@@ -125,8 +186,17 @@
                 </div>
               </div>
             </div>
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" src="img/residents/timar.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">TIEM</h3>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row">
+          <div class="row" style="margin-top: 20px;">
             <div class="col">
               <div class="card">
                 <img class="card-img-top" src="img/residents/sven.jpg" alt="Card image cap">
@@ -169,7 +239,7 @@
         </iframe>
       </div>
       <div class="container-fluid section-container">
-        <div class="col-lg-6 offset-lg-6">
+        <div id="info-col" class="col-lg-6 offset-lg-6">
           <h1 class="display-1">Info</h1>
           <p>Bacon ipsum dolor amet tri-tip andouille venison ham fatback, meatball jowl tenderloin bresaola buffalo corned beef beef ribs pancetta shoulder rump.  Ground round jowl corned beef alcatra, prosciutto venison turkey cupim filet mignon bacon.  Pancetta jowl turkey, pork chop jerky bacon meatball ball tip sirloin pork belly.  Turkey capicola t-bone meatball boudin jowl tail turducken kevin chuck andouille.  Beef turkey chuck ham hock frankfurter ribeye.</p><p>Biltong beef bacon, ground round porchetta pork chop swine flank leberkas turkey.  Rump tri-tip t-bone pig ham hock leberkas jerky.  Meatloaf kielbasa chicken venison sausage, tongue drumstick ham hock pork chop beef shoulder.  Kevin filet mignon beef fatback porchetta.  Pastrami brisket ribeye drumstick tri-tip, rump jowl capicola.  Doner burgdoggen kielbasa drumstick, shank bacon swine beef sausage alcatra t-bone prosciutto tongue.</p><p>Ham hock pork loin bacon jowl frankfurter, ball tip doner tongue shankle landjaeger buffalo porchetta.  Frankfurter venison shankle pork chop, fatback pork belly sausage boudin t-bone turducken turkey burgdoggen ball tip strip steak corned beef.  Jerky sausage fatback meatloaf burgdoggen andouille biltong venison beef shoulder ham.  Salami landjaeger rump strip steak.  Brisket pork landjaeger leberkas.  Pig tail chuck turkey t-bone.  Filet mignon pig pastrami capicola pork chop beef ribs drumstick pancetta rump sirloin.</p><p>Hamburger pork chop landjaeger bacon flank, sausage tail meatloaf ham beef ribs pork.  Doner corned beef ham cow, pancetta venison bresaola ham hock ribeye.  Cow leberkas shoulder kielbasa tail salami meatloaf jerky tenderloin beef drumstick sausage.  Brisket spare ribs ham hock picanha, bacon tongue cupim tri-tip flank burgdoggen.  T-bone biltong sirloin salami.</p><p>Corned beef kielbasa shoulder biltong picanha pancetta.  Corned beef buffalo pastrami, ball tip kevin alcatra sausage.  Ham chicken hamburger, spare ribs doner rump meatball ham hock shoulder leberkas ribeye andouille beef boudin chuck.  Ham hock fatback doner, flank meatloaf pork chop tail pork loin prosciutto cow pork tongue drumstick alcatra.  Doner shoulder sirloin short ribs chuck strip steak jowl swine.</p><p>Pork frankfurter pork chop, pork belly tail ground round burgdoggen chuck prosciutto turducken.  Filet mignon ribeye flank leberkas, pork shank bresaola beef ribs chicken alcatra doner spare ribs kevin.  Turducken flank pork, pork chop spare ribs kevin hamburger beef pork belly buffalo.  Picanha fatback landjaeger ground round.  Tenderloin beef ribs buffalo drumstick shank.  Shank ribeye pork loin capicola.  Tri-tip capicola venison hamburger, chuck jowl bresaola fatback spare ribs.</p><p>Venison porchetta tongue swine beef ribs leberkas shankle.  Tri-tip bacon beef bresaola turkey ball tip pig alcatra turducken hamburger boudin spare ribs.  Capicola porchetta tri-tip doner.  Meatloaf picanha turducken sausage brisket buffalo.  Jerky pork chop turkey venison bresaola ribeye.  Pork beef ribs filet mignon pork loin tenderloin chicken cow swine corned beef.</p><p>Leberkas alcatra boudin pastrami sirloin short loin drumstick, beef hamburger ham shoulder.  Ham hock pancetta pork loin, strip steak sirloin short ribs tongue flank jowl.  Flank kevin drumstick, short loin swine doner bacon strip steak sirloin.  Beef ribs flank fatback spare ribs leberkas kevin shoulder meatloaf filet mignon ribeye doner capicola drumstick pork tail.  Alcatra spare ribs chuck beef ribs, buffalo sirloin biltong ham hock ground round cupim picanha tail chicken.</p><p>Chuck pork belly leberkas, salami bresaola doner sausage landjaeger meatball porchetta chicken.  Ham hock chuck pastrami short ribs turducken flank.  Turducken spare ribs shankle beef ribs, boudin pork loin pig cupim hamburger pork shoulder meatloaf ground round.  Ham hock swine kielbasa, bacon meatloaf sausage bresaola ham pork loin picanha filet mignon turkey ribeye pork.  Filet mignon tongue brisket kevin prosciutto leberkas andouille.  Bresaola tongue pork belly frankfurter.  Hamburger jowl fatback pork loin, drumstick pancetta boudin kielbasa.</p><p>Alcatra doner tail ground round shank hamburger frankfurter pork loin biltong pork chop pork.  Burgdoggen andouille ham sausage ham hock bacon spare ribs pig bresaola pork chop porchetta doner.  Kielbasa short ribs jerky t-bone brisket.  Spare ribs burgdoggen biltong flank ball tip pork kielbasa tri-tip andouille tenderloin picanha salami frankfurter jowl boudin.</p>
         </div>
