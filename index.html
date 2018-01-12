@@ -10,6 +10,8 @@
 
     <title>Sidetrack Studio Amsterdam</title>
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-XI0PIujkSZEzZ5m8WTEm+krRuIpfO+vHrEznaIrhTAkbrbIvfs11kzCqUarPR7yn" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Megrim|Source+Code+Pro:200" rel="stylesheet">
 
     <style>
@@ -35,10 +37,11 @@
 
       .section-container>* {
         z-index: 100;
+        color: #fff;
       }
 
-      .section-container {
-        color: #fff;
+      .section-container .card {
+        color: #000;
       }
 
       #menu {
@@ -69,12 +72,12 @@
         <div id="menu-row" class="row align-items-center">
           <div class="col-lg-6">
             <div id="menu-logo">
-              <a href="#">Sidetrack<br />Studio</a>
+              <a href="#">SIDETRACK<br />STUDIO</a>
             </div>
             <div id="menu-links">
               <a href="#calendar">Calendar</a>
               <a href="#residents">Residents</a>
-              <a href="https://youtube.com/sidetrack.amsterdam">Live</a>
+              <a href="https://www.youtube.com/channel/UCe2sRe-bswHxC494oQkAlVQ/live" target="_blank">Live</a>
               <a href="#info">Info</a>
             </div>
           </div>
@@ -83,7 +86,7 @@
     </div>
 
     <section id="landing" class="page">
-      <div class="section-bg" style="background-image: url('img/bgs/01.jpeg');">
+      <div class="section-bg" style="background-image: url('img/bgs/01.jpg');">
       </div>
     </section>
 
@@ -98,17 +101,46 @@
     </section>
 
     <section id="residents" class="page">
-      <div class="section-bg" style="background-image: url('img/bgs/01.jpeg');">
+      <div class="section-bg" style="background-image: url('img/bgs/04.jpg');">
       </div>
       <div class="container-fluid section-container">
         <div class="col-lg-6 offset-lg-6">
           <h1 class="display-1">Residents</h1>
-          <div class="row">
+          <div class="row card-deck">
             <div class="col">
               <div class="card">
                 <img class="card-img-top" src="img/residents/brent.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h3 class="card-title">Brand</h3>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" src="img/residents/kjeld.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">KJLD</h3>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" src="img/residents/sven.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">GEEBERG</h3>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" src="img/residents/jaap.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">DJ Mafkees</h3>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
@@ -122,10 +154,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col">Resident A</div>
-            <div class="col">Resident b</div>
           </div>
         </div>
       </div>
@@ -148,7 +176,8 @@
       </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js" integrity="sha256-RGlAwHKG24hsj1109SGQgvR+Orx7u8c6zyYH4Tk3ydU=" crossorigin="anonymous"></script>
