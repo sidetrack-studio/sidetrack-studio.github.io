@@ -64,8 +64,31 @@
       }
 
       #menu {
-        position: fixed;
         z-index: 800;
+      }
+
+      #menu-toggle {
+        z-index: 800;
+        position: fixed;
+        right: 2rem;
+        top: 2rem;
+      }
+
+      @media (max-width: 922px){
+        #menu {
+          position: absolute;
+        }
+        #menu-toggle {
+          display: block;
+        }
+      }
+      @media (min-width: 922px){
+        #menu {
+          position: fixed;
+        }
+        #menu-toggle {
+          display: none;
+        }
       }
 
       #menu a {
@@ -74,7 +97,7 @@
       }
 
       #menu-logo>a {
-        font-size: 8rem;
+        font-size: 6rem;
       }
 
       #menu-links>a {
@@ -83,7 +106,7 @@
       }
 
       #menu-icons {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
       }
 
       #menu-icons>a {
@@ -107,6 +130,11 @@
   <body>
 
     <div id="menu">
+      <div id="menu-toggle">
+        <a href="#">
+          <i class="fas fa-3x fa-bars"></i>
+        </a>
+      </div>
       <div id="menu-container" class="container-fluid">
         <div id="menu-row" class="row align-items-center">
           <div class="col-lg-6">
@@ -144,7 +172,7 @@
       <div class="container-fluid section-container">
         <div class="row align-items-center">
           <div id="landing-col" class="col-lg-6 offset-lg-6">
-            <iframe width="640" height="480" src="https://www.youtube.com/embed/live_stream?channel=UCe2sRe-bswHxC494oQkAlVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="d-none d-lg-block" width="640" height="480" src="https://www.youtube.com/embed/live_stream?channel=UCe2sRe-bswHxC494oQkAlVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
