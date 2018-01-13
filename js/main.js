@@ -1,5 +1,6 @@
 $(function() {
   $.scrollify({
-    section : ".page"
+    section : ".page",
+    sectionName : "id"
   });
 });

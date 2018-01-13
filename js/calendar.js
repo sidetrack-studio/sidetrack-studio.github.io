@@ -24,9 +24,9 @@ function addCalRow(dateStr, name, desc, infoUrl, tixUrl){
 
   var colBtns = $('<td class="calendar-item-btns text-center">');
   if(tixUrl)
-    colBtns.append($('<a role="button" class="btn btn-primary btn-block" target="_blank">').html("Tickets").attr('href',tixUrl));
+    colBtns.append($('<a role="button" class="btn btn-sm btn-primary btn-block" target="_blank">').html("Tickets").attr('href',tixUrl));
   if(infoUrl)
-    colBtns.append($('<a role="button" class="btn btn-secondary btn-block" target="_blank">').html("Info").attr('href',infoUrl));
+    colBtns.append($('<a role="button" class="btn btn-sm btn-secondary btn-block" target="_blank">').html("Info").attr('href',infoUrl));
 
   row.append(colDate);
   row.append(colName);

@@ -87,13 +87,16 @@ h1, h2, h3, h4, h5 {
   font-size: 6rem;
 }
 
+#menu-links {
+  margin: 3rem 0rem;
+}
+
 #menu-links>a {
   display: block;
   font-size: 3rem;
 }
 
 #menu-icons {
-  margin-top: 1rem;
 }
 
 #menu-icons>a {
@@ -115,7 +118,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .calendar-item {
-  height: 8rem;
+  height: 10rem;
   background-color: #ffffffa8;
   border-bottom: 1px solid #fff;
 }
@@ -152,6 +155,11 @@ h1, h2, h3, h4, h5 {
   text-decoration: underline;
 }
 
-#info-col p, li {
-  font-size: 2rem;
+#info-col p, li, .btn {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+#info-col .btn {
+  margin: 3rem 0;
 }
