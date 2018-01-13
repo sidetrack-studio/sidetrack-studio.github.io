@@ -1,0 +1,157 @@
+
+/* Common */
+
+html, body, section, .section-bg, #menu, #menu-container, #menu-row {
+  height: 100%;
+  width: 100%;
+}
+
+body, section, p {
+  font-family: 'Source Code Pro', monospace;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Megrim', cursive;
+}
+
+.display-1 {
+  color: #fff;
+}
+
+
+/* Sections */
+
+.section-bg {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  z-index: 100;
+  height: inherit;
+  width: inherit;
+}
+
+.section-container {
+  height: inherit;
+}
+.section-container>.row {
+  height: inherit;
+}
+
+.section-container>* {
+  z-index: 700;
+  color: #fff;
+  height: inherit;
+}
+
+.section-container .card {
+  color: #000;
+}
+
+
+/* Menu */
+
+#menu {
+  z-index: 600;
+}
+
+#menu-toggle {
+  z-index: 800;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+}
+
+@media (max-width: 922px){
+  #menu {
+    position: absolute;
+  }
+  #menu-toggle {
+    display: block;
+  }
+}
+@media (min-width: 922px){
+  #menu {
+    position: fixed;
+  }
+  #menu-toggle {
+    display: none;
+  }
+}
+
+#menu a {
+  font-family: 'Megrim', cursive;
+  color: #fff;
+}
+
+#menu-logo>a {
+  font-size: 6rem;
+}
+
+#menu-links>a {
+  display: block;
+  font-size: 3rem;
+}
+
+#menu-icons {
+  margin-top: 1rem;
+}
+
+#menu-icons>a {
+  margin-right: 1rem;
+}
+
+
+#landing-col {
+  z-index: 700;
+}
+
+
+/* Calendar */
+
+#calendar-table {
+  font-family: 'Megrim', cursive;
+  width: 100%;
+  border-spacing: 1rem;
+}
+
+.calendar-item {
+  height: 8rem;
+  background-color: #ffffffa8;
+  border-bottom: 1px solid #fff;
+}
+
+.calendar-item:hover {
+  background-color: #ffffffd4;
+}
+
+.calendar-item-date {
+  width: 20%;
+}
+
+.calendar-item-title {
+  width: 65%;
+}
+
+.calendar-item-btns {
+  padding: 1rem;
+  width: 15%;
+}
+
+/* Info */
+
+#info-col {
+  background-color: #ffffffbf;
+  color: #000;
+}
+
+#info-col>h1 {
+  color: #000;
+}
+
+#info-col a {
+  text-decoration: underline;
+}
+
+#info-col p, li {
+  font-size: 2rem;
+}

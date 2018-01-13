@@ -20,121 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Megrim|Source+Code+Pro:200" rel="stylesheet">
 
     <!-- Custom styling -->
-    <style>
-      html, body, section, .section-bg, #menu, #menu-container, #menu-row {
-        height: 100%;
-        width: 100%;
-      }
-
-      body, section, p {
-        font-family: 'Source Code Pro', monospace;
-      }
-
-      h1, h2, h3, h4, h5 {
-        font-family: 'Megrim', cursive;
-      }
-
-      .display-1 {
-        color: #fff;
-      }
-
-      .section-bg {
-        position: absolute;
-        background-position: center;
-        background-size: cover;
-        z-index: 1;
-        height: inherit;
-        width: inherit;
-      }
-
-      .section-container {
-        height: inherit;
-      }
-      .section-container>.row {
-        height: inherit;
-      }
-
-      .section-container>* {
-        z-index: 100;
-        color: #fff;
-        height: inherit;
-      }
-
-      .section-container .card {
-        color: #000;
-      }
-
-      #menu {
-        z-index: 800;
-      }
-
-      #menu-toggle {
-        z-index: 800;
-        position: fixed;
-        right: 2rem;
-        top: 2rem;
-      }
-
-      @media (max-width: 922px){
-        #menu {
-          position: absolute;
-        }
-        #menu-toggle {
-          display: block;
-        }
-      }
-      @media (min-width: 922px){
-        #menu {
-          position: fixed;
-        }
-        #menu-toggle {
-          display: none;
-        }
-      }
-
-      #menu a {
-        font-family: 'Megrim', cursive;
-        color: #fff;
-      }
-
-      #menu-logo>a {
-        font-size: 6rem;
-      }
-
-      #menu-links>a {
-        display: block;
-        font-size: 3rem;
-      }
-
-      #menu-icons {
-        margin-top: 1rem;
-      }
-
-      #menu-icons>a {
-        margin-right: 1rem;
-      }
-
-      #info-col {
-        background-color: #ffffffbf;
-        color: #000;
-      }
-
-      #info-col>h1 {
-        color: #000;
-      }
-
-      #info-col a {
-        text-decoration: underline;
-      }
-
-      #info-col p, li {
-        font-size: 2rem;
-      }
-
-      #landing-col {
-        z-index: 900;
-      }
-    </style>
+    <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
 
@@ -153,7 +39,6 @@
             <div id="menu-links">
               <a href="#calendar">Calendar</a>
               <a href="#residents">Residents</a>
-
               <a href="#info">Info</a>
             </div>
             <div id="menu-icons">
@@ -193,7 +78,10 @@
       <div class="container-fluid section-container">
         <div class="col-lg-6 offset-lg-6">
           <h1 class="display-1">Calendar</h1>
-          <iframe src="https://calendar.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=paylogic.eu_u2eh90s5p8f481s9262rpu0ahk%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=Europe%2FAmsterdam" style="border-width:0" width="100%" height="75%" frameborder="0" scrolling="no"></iframe>
+          <table id="calendar-table">
+            <tbody>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -205,6 +93,15 @@
         <div class="col-lg-6 offset-lg-6">
           <h1 class="display-1">Residents</h1>
           <div class="row">
+            <div class="col">
+              <div class="card">
+                <img class="card-img-top" src="img/residents/timar.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">TIEM</h3>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
             <div class="col">
               <div class="card">
                 <img class="card-img-top" src="img/residents/brent.jpg" alt="Card image cap">
@@ -219,15 +116,6 @@
                 <img class="card-img-top" src="img/residents/kjeld.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h3 class="card-title">KJLD</h3>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img class="card-img-top" src="img/residents/timar.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h3 class="card-title">TIEM</h3>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
@@ -271,7 +159,7 @@
         <iframe
           width="100%"
           height="100%"
-          frameborder="0" style="border:0"
+          frameborder="0" style="border: 0px;"
           src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDqEiSNEP-cJP29JkQfstYq38BZcxQpIas&center=52.377593,4.906066&zoom=18&maptype=satellite" allowfullscreen>
         </iframe>
       </div>
@@ -307,14 +195,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js" integrity="sha256-RGlAwHKG24hsj1109SGQgvR+Orx7u8c6zyYH4Tk3ydU=" crossorigin="anonymous"></script>
 
-    <script>
-      $(function() {
-        $.scrollify({
-          section : ".page"
-        });
-      });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js" integrity="sha256-RGlAwHKG24hsj1109SGQgvR+Orx7u8c6zyYH4Tk3ydU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js" integrity="sha256-XWrGUqSiENmD8bL+BVeLl7iCfhs+pkPyIqrZQcS2Te8=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
   </body>
 </html>
